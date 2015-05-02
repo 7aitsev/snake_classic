@@ -16,28 +16,28 @@
 <h6>Game's menu</h6>
 <table>
   <tr>
-    <td><img src="screenshots/menu_0_en.png" alt="game's menu, portrait, English" width="70%"></td>
-    <td><img src="screenshots/menu_1_en.png" alt="game's menu, landscape, English" width="70%"></td>
+    <td><img src="screenshots/menu_0_en.png" alt="game's menu, portrait, English" width="253" height="421"></td>
+    <td><img src="screenshots/menu_1_en.png" alt="game's menu, landscape, English" width="421" height="253"></td>
   </td>
 </table>
 <h6>Gameplay</h6>
 <table>
   <tr>
-    <td><img src="screenshots/game_0_en.png" alt="gameplay, start dialog, English" width="70%"></td>
-    <td><img src="screenshots/game_2_en.png" alt="gameplay, game stage, English" width="70%"></td>
+    <td><img src="screenshots/game_0_en.png" alt="gameplay, start dialog, English" width="337" height="556""></td>
+    <td><img src="screenshots/game_2_en.png" alt="gameplay, game stage, English" width="337" height="556"></td>
   </td>
 </table>
 <h6>Game's dialogs</h6>
 <table>
   <tr>
-    <td><img src="screenshots/dialog_0_en.png" alt="you win, dialog, English" width="70%"></td>
-    <td><img src="screenshots/dialog_1_en.png" alt="game over, dialog, English" width="70%"></td>
+    <td><img src="screenshots/dialog_0_en.png" alt="you win, dialog, English" width="337" height="556"></td>
+    <td><img src="screenshots/dialog_1_en.png" alt="game over, dialog, English" width="337" height="556"></td>
   </td>
 </table>
 <h6>Russian localization</h6>
 <table>
   <tr>
-    <td><img src="screenshots/menu_0_ru.png" alt="game's menu, portrait, Russian" width="70%"></td>
-    <td><img src="screenshots/dialog_0_ru.png" alt="do you want to quit, dialog, Russian" width="70%"></td>
+    <td><img src="screenshots/menu_0_ru.png" alt="game's menu, portrait, Russian" width="337" height="556"></td>
+    <td><img src="screenshots/dialog_0_ru.png" alt="do you want to quit, dialog, Russian" width="337" height="556"></td>
   </td>
 </table>
