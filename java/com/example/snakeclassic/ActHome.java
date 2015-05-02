@@ -2,10 +2,10 @@ package com.example.snakeclassic;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,7 +26,12 @@ import android.widget.ViewFlipper;
  */
 public class ActHome extends Activity {
   private ViewFlipper mFlipper;
-  private final String DISPLAYED_LAYOUT = "layout";
+  private final String KEY_DISPLAYED_LAYOUT = "layout",
+                       KEY_BREAK_POINT = "breakPoint";
+  // only one instance of mp will exist
+  private static MediaPlayer mp = null;
+  private int currPos = 0;
+  private boolean weakPause = false;
 
   @Override
   public void onBackPressed() {
@@ -42,10 +47,18 @@ public class ActHome extends Activity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.home);
 
+    // manage MediaPlayer
+    mp = MediaPlayer.create(getApplicationContext(), R.raw.main_theme);
+    mp.setLooping(true);
+    if(savedInstanceState != null) {
+      mp.seekTo(savedInstanceState.getInt(KEY_BREAK_POINT));
+    }
+    mp.start();
+
     // get pointer to a ViewFlipper from the layout
     mFlipper = (ViewFlipper) findViewById(R.id.layout_home_flipper);
     if(savedInstanceState != null)
-      mFlipper.setDisplayedChild(savedInstanceState.getInt(DISPLAYED_LAYOUT));
+      mFlipper.setDisplayedChild(savedInstanceState.getInt(KEY_DISPLAYED_LAYOUT));
 
     // make the link in credit text clickable and highlighted
     TextView credits = (TextView) findViewById(R.id.credits);
@@ -92,6 +105,33 @@ public class ActHome extends Activity {
   @Override
   protected void onSaveInstanceState(@NonNull Bundle outState) {
     super.onSaveInstanceState(outState);
-    outState.putInt(DISPLAYED_LAYOUT, mFlipper.getDisplayedChild());
+    outState.putInt(KEY_DISPLAYED_LAYOUT, mFlipper.getDisplayedChild());
+    outState.putInt(KEY_BREAK_POINT, currPos);
+  }
+
+  @Override
+  protected void onResume() {
+    super.onResume();
+    if(mp != null && !mp.isPlaying()) {
+      if(weakPause)
+        mp.seekTo(currPos);
+      else
+        mp.seekTo(0);
+      mp.start();
+    }
+  }
+
+  @Override
+  protected void onPause() {
+    super.onPause();
+    mp.pause();
+    currPos = mp.getCurrentPosition();
+    weakPause = true;
+  }
+
+  @Override
+  protected void onStop() {
+    super.onStop();
+    weakPause = false;
   }
 }

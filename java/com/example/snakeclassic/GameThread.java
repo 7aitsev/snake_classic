@@ -228,8 +228,6 @@ class GameThread extends Thread {
     if(state != 0) {
       setState(state);
       sendMsg(ActSnakeGame.TOUCH_DIALOG, state);
-//      Message m = handler.obtainMessage(ActSnakeGame.TOUCH_DIALOG, state);
-//      handler.sendMessage(m);
       if(state == STATE_WIN) {
         periodicity = 250L;
         STATE_GOD_MODE = false;

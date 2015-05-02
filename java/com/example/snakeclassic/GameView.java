@@ -12,7 +12,6 @@ import android.view.SurfaceView;
 public class GameView extends SurfaceView
                       implements SurfaceHolder.Callback {
   private final GameThread thread;
-//  private InterField.Snake snake;
 
   public GameView(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -20,9 +19,6 @@ public class GameView extends SurfaceView
 
     // create thread only: it's started in surfaceCreated()
     thread = new GameThread(getHolder(), context);
-
-//    // get pointer to the snake
-//    snake = thread.getSnake();
   }
 
   @Override
@@ -57,11 +53,6 @@ public class GameView extends SurfaceView
   public GameThread getThread() {
     return thread;
   }
-
-//  public void changeDir(int key) {
-//    snake = thread.getSnake();
-//    snake.changeDir(key);
-//  }
 
   /**
    * Standard window-focus override. Notice focus lost so we can pause on focus
