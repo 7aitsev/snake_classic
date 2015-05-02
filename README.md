@@ -9,6 +9,35 @@
   <li>English and Russian languages</li>
   <li>Controlling the snake by directional swipe, that is you only need to swipe in the direction you want to turn your snake</li>
   <li>Partial support for landscape orientation (far only in the game's main menu)</li>
-  <li>Classic video game font (designed by <a href="http://zone38.net/">codeman38</a></li>
+  <li>Classic video game font (designed by <a href="http://zone38.net/">codeman38)</a></li>
   <li>And more :)</li>
 </ul>
+<h3>Screenshots</h3>
+<h6>Game's menu</h6>
+<table>
+  <tr>
+    <td><img src="screenshots/menu_0_en.png" alt="game's menu, portrait, English"></td>
+    <td><img src="screenshots/menu_1_en.png" alt="game's menu, landscape, English"></td>
+  </td>
+</table>
+<h6>Gameplay</h6>
+<table>
+  <tr>
+    <td><img src="screenshots/game_0_en.png" alt="gameplay, start dialog, English"></td>
+    <td><img src="screenshots/game_2_en.png" alt="gameplay, game stage, English"></td>
+  </td>
+</table>
+<h6>Game's dialogs</h6>
+<table>
+  <tr>
+    <td><img src="screenshots/dialog_0_en.png" alt="you win, dialog, English"></td>
+    <td><img src="screenshots/dialog_1_en.png" alt="game over, dialog, English"></td>
+  </td>
+</table>
+<h6>Russian localization</h6>
+<table>
+  <tr>
+    <td><img src="screenshots/menu_0_ru.png" alt="game's menu, portrait, Russian"></td>
+    <td><img src="screenshots/dialog_0_ru.png" alt="do you want to quit, dialog, Russian"></td>
+  </td>
+</table>
