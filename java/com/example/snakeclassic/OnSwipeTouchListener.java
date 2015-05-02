@@ -11,7 +11,7 @@ import android.view.View.OnTouchListener;
  * This code detects top, left, bottom and right swipes
  * See details: stackoverflow.com/questions/4139288
  */
-public class OnSwipeTouchListener implements OnTouchListener {
+class OnSwipeTouchListener implements OnTouchListener {
   private final GestureDetector gestureDetector;
 
   public OnSwipeTouchListener (Context ctx){

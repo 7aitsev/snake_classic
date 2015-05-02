@@ -6,6 +6,7 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
 /**
+ * Game view in which everything will take place
  * Created by Maxim on 10.04.2015.
  */
 public class GameView extends SurfaceView

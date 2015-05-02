@@ -48,9 +48,9 @@ class GameThread extends Thread {
                        KEY_PERIODICITY = "periodicity";
 
   private final SurfaceHolder surfaceHolder;
-  private Bitmap wall_pic,
-                 body_pic,
-                 fruit_pic;
+  private final Bitmap wall_pic,
+                       body_pic,
+                       fruit_pic;
 
   /**
    * Message handler used by thread to interact with TextView(s) or to show

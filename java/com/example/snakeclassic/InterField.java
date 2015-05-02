@@ -5,18 +5,20 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
+ * Class that connects Snake and Fruit class. For ease and better performance
  * Created by Maxim on 26.04.2015.
  */
 public class InterField implements Parcelable {
-  private Snake snake;
-  private Fruit fruit;
+  private final Snake snake;
+  private final Fruit fruit;
 
-  private int n,
-              m,
-              snakeLength;
-  private int snakeSize = 3,
-              snakeX = 3,
-              snakeY = 2;
+  private final int n,
+                    m,
+                    snakeX = 3,
+                    snakeY = 2;
+  private int snakeLength,
+              snakeSize = 3;
+
 
   private Point pivotA, pivotB, pivotC, pivotD;
 

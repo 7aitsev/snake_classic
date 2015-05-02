@@ -1,9 +1,8 @@
 package com.example.snakeclassic;
 
-/**
- * Created by Maxim on 08.04.2015.
+/*
+ * Override the default font
  */
-
 public final class App extends android.app.Application {
   @Override
   public void onCreate() {

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 /**
+ * The dialog will called when a gamer wins or loses
  * Created by Maxim on 27.04.2015.
  */
 public class DialogState extends DialogFragment {

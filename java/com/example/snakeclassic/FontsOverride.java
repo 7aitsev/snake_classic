@@ -6,10 +6,12 @@ import android.content.Context;
 import android.graphics.Typeface;
 
 /**
- * Created by Maxim on 08.04.2015.
+ * This solution for font overriding was provided by weston
+ * (stackoverflow.com/users/360211/weston).
+ * For more details: stackoverflow.com/question/2711858
  */
 
-public final class FontsOverride {
+final class FontsOverride {
 
   public static void setDefaultFont(Context context,
                                     String staticTypefaceFieldName,
@@ -35,7 +37,3 @@ public final class FontsOverride {
     }
   }
 }
-
-/* This solution was provided by weston (stackoverflow.com/users/360211/weston).
- * For more details: stackoverflow.com/question/2711858
- */

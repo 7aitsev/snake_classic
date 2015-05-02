@@ -9,7 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 /**
- * Created by Максим on 01.05.2015.
+ * This dialog will invoked when an user wants to quit from the game
+ * Created by Maxim on 01.05.2015.
  */
 public class DialogQuit extends DialogFragment {
 
