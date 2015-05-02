@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:gravity="center"
+  android:background="@drawable/bg_game_view">
+  <!-- section which is displaying current score and time -->
+  <LinearLayout
+    android:id="@+id/layout_info"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/game_v_gap"
+    android:paddingLeft="@dimen/info_layout_gap"
+    android:paddingRight="@dimen/info_layout_gap">
+    <LinearLayout
+      style="@style/info_section">
+      <TextView
+        style="@style/game_text"
+        android:layout_width="wrap_content"
+        android:gravity="bottom"
+        android:paddingLeft="@dimen/info_gap"
+
+        android:text="@string/txt_score"/>
+      <TextView
+        android:id="@+id/score"
+        style="@style/game_text"
+        android:layout_width="match_parent"
+        android:gravity="right|bottom"
+        android:paddingRight="@dimen/info_gap"
+
+        android:text="@string/txt_score_init"
+        android:textColor="@color/light_green"/>
+      </LinearLayout>
+    <LinearLayout
+      style="@style/info_section">
+      <TextView
+        style="@style/game_text"
+        android:layout_width="wrap_content"
+        android:gravity="bottom"
+        android:paddingLeft="@dimen/info_gap"
+
+        android:text="@string/txt_time"/>
+      <TextView
+        android:id="@+id/time"
+        style="@style/game_text"
+        android:layout_width="match_parent"
+        android:gravity="right|bottom"
+        android:paddingRight="@dimen/info_gap"
+
+        android:text="@string/txt_time_init"
+        android:textColor="@color/light_green"/>
+    </LinearLayout>
+  </LinearLayout>
+  <!-- game view -->
+  <com.example.snakeclassic.GameView
+    android:id="@+id/game_field"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/game_v_gap"
+    android:layout_marginLeft="@dimen/game_h_gap"
+    android:layout_marginBottom="@dimen/game_v_gap"
+    android:layout_marginRight="@dimen/game_h_gap"/>
+  <!-- control buttons -->
+  <RelativeLayout
+    android:id="@+id/layout_control"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/game_h_gap"
+    android:paddingRight="@dimen/game_h_gap">
+    <Button
+      android:id="@+id/but_pause"
+      android:layout_alignParentRight="true"
+      android:layout_width="@dimen/but_pause_size"
+      android:layout_height="@dimen/but_pause_size"
+      android:layout_marginTop="@dimen/but_pause_margin_top"
+      android:background="@drawable/but_pause"/>
+    <!--
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/game_v_gap"
+      android:layout_alignParentBottom="true">
+      <Button
+        android:id="@+id/left"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:text="LEFT"
+        android:textColor="@color/light_aqua"/>
+      <Button
+        android:id="@+id/right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+
+        android:text="RIGHT"
+        android:textColor="@color/light_aqua"/>
+    </LinearLayout>
+    -->
+  </RelativeLayout>
+  <!-- it becomes visible only at the game start -->
+  <LinearLayout
+    android:id="@+id/layout_start_screen"
+    style="@style/very_useful_linear_layout_style"
+    android:layout_centerInParent="true"
+    android:paddingRight="@dimen/game_h_gap"
+    android:paddingLeft="@dimen/game_h_gap"
+    android:visibility="invisible">
+    <TextView
+      style="@style/title"
+      android:padding="@dimen/txt_gap"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:text="@string/txt_ready"/>
+    <Button
+      style="@style/common_button"
+      android:id="@+id/but_start"
+      android:gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/but_ready"/>
+    </LinearLayout>
+</RelativeLayout>

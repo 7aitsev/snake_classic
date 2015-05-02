@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Snake Classic</string>
+  <string name="txt_app_name">Snake\nClassic</string>
+
+  <!-- used in the home activity -->
+  <string name="desc_bg">background</string>
+  <string name="desc_bg_fst">dots background first</string>
+  <string name="desc_bg_snd">dots background second</string>
+
+  <string name="but_play">Play</string>
+  <string name="but_high_scores">High Scores</string>
+  <string name="but_rules">Rules</string>
+  <string name="but_about">About</string>
+  <string name="txt_about">Snake Classic is a simple and addictive version of the one of the most popular casual games in the world\n\nMaxim Zaitsev\nVersion: 0.9\nYear: 2015</string>
+  <string name="txt_credits">This project includes font that is licensed under SIL OFL and designed by <a href="http://www.zone38.net">codeman38</a></string>
+  <string name="txt_rules">Player is controlling a snake, which is crawling in a compound wall\n\nThere will be new fruits placed at different parts of the playing area and the strategy is to eat all of these while ensuring a smooth movement by the snake\n\nThe snake\'s movement should not be restricted by a wall or its own body\n\nWhile starting to play the game, managing the movement of your snake is very easy but when your snake eats fruits, the snake\'s body becomes bigger and navigation of the snake is very difficult</string>
+
+  <!-- used in the game activity -->
+  <string name="txt_time">Time:</string>
+  <string name="txt_time_init">00:00</string>
+  <string name="txt_score">Score:</string>
+  <string name="txt_score_init">0</string>
+  <string name="txt_ready">Are you ready?</string>
+  <string name="but_ready">Start!</string>
+  <string name="txt_game_over">Game\nover</string>
+  <string name="txt_you_win">You\nwin</string>
+  <string name="but_play_again">Play again?</string>
+  <string name="txt_quit">Do you want\nto quit?</string>
+  <string name="but_quit_yes">Yes</string>
+  <string name="but_quit_no">No</string>
+</resources>

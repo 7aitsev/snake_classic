@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="but_h_gap">10dp</dimen>
+  <dimen name="but_v_gap">16dp</dimen>
+
+  <dimen name="txt_gap">16dp</dimen>
+
+  <dimen name="game_h_gap">32dp</dimen>
+  <dimen name="game_v_gap">64dp</dimen>
+  <dimen name="info_layout_gap">28dp</dimen>
+  <dimen name="info_gap">4dp</dimen>
+
+  <!-- text sizes -->
+  <dimen name="txt_home">32sp</dimen>
+  <dimen name="txt_activity">24sp</dimen>
+  <dimen name="txt_buttons">16sp</dimen>
+  <dimen name="txt_common">12sp</dimen>
+  <dimen name="txt_info">11sp</dimen>
+  <dimen name="txt_credit">10sp</dimen>
+  <dimen name="line_spacing">1sp</dimen>
+
+  <dimen name="but_pause_size">38dp</dimen>
+  <dimen name="but_pause_margin_top">4dp</dimen>
+</resources>

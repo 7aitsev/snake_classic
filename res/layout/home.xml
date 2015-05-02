@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+  <!-- background section -->
+  <ImageView
+    android:id="@+id/bg"
+    style="@style/bg_img_view"
+    android:src="@drawable/bg"
+    android:contentDescription="@string/desc_bg"/>
+  <ImageView
+    android:id="@+id/bg_animation_fst"
+    style="@style/bg_img_view"
+    android:contentDescription="@string/desc_bg_fst"/>
+  <ImageView
+    android:id="@+id/bg_animation_snd"
+    style="@style/bg_img_view"
+    android:contentDescription="@string/desc_bg_snd"/>
+  <!-- manage ViewFlipper -->
+  <ViewFlipper
+    android:id="@+id/layout_home_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- contains of menu's items -->
+    <LinearLayout
+      android:id="@+id/layout_home"
+      style="@style/very_useful_linear_layout_style">
+      <!-- game name section -->
+      <TextView
+        style="@style/activity"
+        android:textSize="@dimen/txt_home"
+        android:text="@string/txt_app_name"/>
+      <!-- navigation buttons section -->
+      <LinearLayout
+        style="@style/very_useful_linear_layout_style"
+        android:orientation="vertical"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <Button
+          style="@style/common_button"
+          android:id="@+id/but_play"
+          android:layout_marginBottom="@dimen/but_v_gap"
+          android:text="@string/but_play"/>
+        <Button
+          style="@style/common_button"
+          android:id="@+id/but_high_scores"
+          android:layout_marginTop="@dimen/but_v_gap"
+          android:layout_marginBottom="@dimen/but_v_gap"
+          android:text="@string/but_high_scores"/>
+        <Button
+          style="@style/common_button"
+          android:id="@+id/but_rules"
+          android:layout_marginTop="@dimen/but_v_gap"
+          android:layout_marginBottom="@dimen/but_v_gap"
+          android:text="@string/but_rules"/>
+        <Button
+          style="@style/common_button"
+          android:id="@+id/but_about"
+          android:layout_marginTop="@dimen/but_v_gap"
+          android:text="@string/but_about"/>
+      </LinearLayout>
+    </LinearLayout>
+    <!-- layout for the "Rules" content -->
+    <LinearLayout
+      android:id="@+id/layer_rules"
+      style="@style/very_useful_linear_layout_style">
+      <TextView
+        style="@style/activity"
+        android:text="@string/but_rules"/>
+      <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:paddingBottom="@dimen/txt_gap"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <TextView
+          style="@style/text"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:padding="@dimen/txt_gap"
+          android:lineSpacingExtra="@dimen/line_spacing"
+          android:text="@string/txt_rules"/>
+      </ScrollView>
+    </LinearLayout>
+    <!-- layout for the "About" content -->
+    <RelativeLayout
+      android:id="@+id/layer_about"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+        style="@style/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/txt_gap"
+        android:paddingRight="@dimen/txt_gap"
+
+        android:lineSpacingExtra="@dimen/line_spacing"
+        android:text="@string/txt_about"/>
+      <LinearLayout
+        style="@style/very_useful_linear_layout_style">
+        <TextView
+          style="@style/activity"
+          android:text="@string/but_about"/>
+        <TextView
+          android:id="@+id/credits"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="3"
+          android:gravity="center|bottom"
+          android:padding="@dimen/txt_gap"
+
+          android:text="@string/txt_credits"
+          android:textSize="@dimen/txt_credit"
+          android:textColor="@color/light_aqua"
+          android:typeface="monospace"
+          android:lineSpacingExtra="@dimen/line_spacing"
+
+          android:linksClickable="true"/>
+      </LinearLayout>
+    </RelativeLayout>
+  </ViewFlipper>
+</RelativeLayout>

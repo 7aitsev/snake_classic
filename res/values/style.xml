@@ -1,0 +1,87 @@
+<resources>
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <item name="android:typeface">monospace</item>
+  </style>
+
+  <!-- Custom styles -->
+  <style name="bg_img_view">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:src">@drawable/bg_dots</item>
+    <item name="android:scaleType">fitXY</item>
+  </style>
+
+  <style name="text_shadows">
+    <item name="android:shadowDx">0</item>
+    <item name="android:shadowDy">0</item>
+  </style>
+
+  <!-- used for dialog messages in ActSnakeGame -->
+  <style name="title" parent="text_shadows">
+    <item name="android:typeface">monospace</item>
+    <item name="android:textColor">@color/light_purple</item>
+    <item name="android:textSize">@dimen/txt_activity</item>
+    <item name="android:textAllCaps">true</item>
+    <item name="android:shadowRadius">24</item>
+    <item name="android:shadowColor">@color/light_purple</item>
+    <item name="android:gravity">center</item>
+  </style>
+
+  <!-- used for activities title -->
+  <style name="activity" parent="title">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">0dp</item>
+    <item name="android:layout_weight">1</item>
+  </style>
+
+  <!-- used only for application name in the main activity -->
+  <style name="home_app_name" parent="activity">
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">0</item>
+    <item name="android:textSize">@dimen/txt_home</item>
+  </style>
+
+  <style name="text" parent="text_shadows">
+    <item name="android:textColor">@color/light_aqua</item>
+    <item name="android:textSize">@dimen/txt_common</item>
+    <item name="android:typeface">monospace</item>
+    <item name="android:shadowRadius">16</item>
+    <item name="android:shadowColor">@color/light_aqua</item>
+    <item name="android:textAllCaps">true</item>
+  </style>
+
+  <!-- used nearly for every button in the project -->
+  <style name="common_button" parent="text">
+    <item name="android:textColor">@color/buttons_color</item>
+    <item name="android:textSize">@dimen/txt_buttons</item>
+
+    <item name="android:background">@null</item>
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:paddingLeft">@dimen/but_h_gap</item>
+    <item name="android:paddingRight">@dimen/but_h_gap</item>
+  </style>
+
+  <!-- used in the play layout for score and time sections -->
+  <style name="info_section">
+    <item name="android:orientation">horizontal</item>
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:layout_weight">1</item>
+  </style>
+
+  <style name="game_text" parent="text">
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:textSize">@dimen/txt_info</item>
+    <item name="android:paddingBottom">@dimen/info_gap</item>
+  </style>
+
+  <style name="very_useful_linear_layout_style">
+    <item name="android:orientation">vertical</item>
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">match_parent</item>
+    <item name="android:gravity">center</item>
+  </style>
+</resources>

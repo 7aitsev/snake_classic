@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Змейка Classic</string>
+  <string name="txt_app_name">Змейка\nClassic</string>
+
+  <!-- used in the home activity -->
+  <string name="desc_bg">фон</string>
+  <string name="desc_bg_fst">первый фон из точек</string>
+  <string name="desc_bg_snd">второй фон из точек</string>
+
+  <string name="but_play">Играть</string>
+  <string name="but_high_scores">Рекорды</string>
+  <string name="but_rules">Правила</string>
+  <string name="but_about">Об игре</string>
+  <string name="txt_about">Змейка Classic это простой и увлекательный вариант одной из самых популярных игр в мире\n\nМаксим Зайцев\nВерсия: 0.9\nГод: 2015</string>
+  <string name="txt_credits">В проекте используется распростроняемый по лиценции SIL OFL шрифт, разработанный <a href="http://www.zone38.net">codeman38</a></string>
+  <string name="txt_rules">Вам предстоит управлять змейкой, которая ползает внутри поля, ограниченного стеной\n\nВ любом месте поля появляются фрукты, которые нужно съесть как можно больше, пока змейка не займет все пространство\n\nДвижение змейки не остановить, поэтому пытайтесь не сталкиваться с ее собственным телом или стенами\n\nВ начале игры управлять змейкой несложно, но с каждым съеденным фруктом она растет и становится длиннее, что усложняет игру.</string>
+
+  <!-- used in the game activity -->
+  <string name="txt_time">Время</string>
+  <string name="txt_time_init">00:00</string>
+  <string name="txt_score">Очки</string>
+  <string name="txt_score_init">0</string>
+  <string name="txt_ready">Вы готовы?</string>
+  <string name="but_ready">Да!</string>
+  <string name="txt_game_over">Игра\nокончена</string>
+  <string name="txt_you_win">Вы\nвыиграли</string>
+  <string name="but_play_again">Играть еще?</string>
+  <string name="txt_quit">Покинуть\nигру?</string>
+  <string name="but_quit_yes">Да</string>
+  <string name="but_quit_no">Нет</string>
+</resources>
