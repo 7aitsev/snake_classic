@@ -203,10 +203,16 @@ public class InterField implements Parcelable {
     // save state of Snake's
     dest.writeInt(snake.dir);
     dest.writeInt(snake.size);
+    dest.writeInt(snakeSize);
     dest.writeParcelableArray(snake.s, Point.PARCELABLE_WRITE_RETURN_VALUE);
     // save state of Fruit's
     dest.writeInt(fruit.x);
     dest.writeInt(fruit.y);
+    // save pivots points to run Easter Egg
+    dest.writeParcelable(pivotA, Point.PARCELABLE_WRITE_RETURN_VALUE);
+    dest.writeParcelable(pivotB, Point.PARCELABLE_WRITE_RETURN_VALUE);
+    dest.writeParcelable(pivotC, Point.PARCELABLE_WRITE_RETURN_VALUE);
+    dest.writeParcelable(pivotD, Point.PARCELABLE_WRITE_RETURN_VALUE);
   }
 
   public static final Parcelable.Creator<InterField> CREATOR =
@@ -226,11 +232,16 @@ public class InterField implements Parcelable {
     fruit = new Fruit();
     snake.dir = source.readInt();
     snake.size = source.readInt();
+    snakeSize = source.readInt();
     Parcelable p[] = source.readParcelableArray(Point.class.getClassLoader());
     snake.s = new Point[p.length];
     for(int i = 0; i < p.length; ++i)
       snake.s[i] = (Point) p[i];
     fruit.x = source.readInt();
     fruit.y = source.readInt();
+    pivotA = source.readParcelable(Point.class.getClassLoader());
+    pivotB = source.readParcelable(Point.class.getClassLoader());
+    pivotC = source.readParcelable(Point.class.getClassLoader());
+    pivotD = source.readParcelable(Point.class.getClassLoader());
   }
 }

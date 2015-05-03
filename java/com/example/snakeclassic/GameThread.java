@@ -70,8 +70,10 @@ class GameThread extends Thread {
   private final int N = 12, M = 17;
   private float W, H, SCALE;
 
-  private long prevTime, gameStartTime, gameTime,
-               periodicity = 250L;
+  private long prevTime, gameStartTime, gameTime;
+  private final short constPeriodicity = 250, // when game runs in normal mode
+                      constFastPeriodicity = 0; // while an Easter Egg runs
+  private short periodicity = 250;
 
   public GameThread(SurfaceHolder surfaceHolder, Context context) {
     this.surfaceHolder = surfaceHolder;
@@ -153,7 +155,7 @@ class GameThread extends Thread {
         map.putByte(KEY_MODE, mode);
         map.putParcelable(KEY_FIELD, field);
         map.putBoolean(KEY_GOD_MODE, STATE_GOD_MODE);
-        map.putLong(KEY_PERIODICITY, periodicity);
+        map.putShort(KEY_PERIODICITY, periodicity);
       }
     }
     return map;
@@ -174,7 +176,7 @@ class GameThread extends Thread {
       snake = field.getSnake();
       fruit = field.getFruit();
       STATE_GOD_MODE = savesState.getBoolean(KEY_GOD_MODE);
-      periodicity = savesState.getLong(KEY_PERIODICITY);
+      periodicity = savesState.getShort(KEY_PERIODICITY);
 
       // initialize score and time on the game's activity
       showScoreAndTime();
@@ -229,7 +231,7 @@ class GameThread extends Thread {
       setState(state);
       sendMsg(ActSnakeGame.TOUCH_DIALOG, state);
       if(state == STATE_WIN) {
-        periodicity = 250L;
+        periodicity = constPeriodicity;
         STATE_GOD_MODE = false;
       }
       //setRunning(false); // newer do this!
@@ -361,7 +363,7 @@ class GameThread extends Thread {
   }
 
   public void runEasterEgg() {
-    periodicity = 5L;
+    periodicity = constFastPeriodicity;
     STATE_GOD_MODE = true;
     gameStartTime = gameTime = prevTime = getMills(System.nanoTime());
     snake.prepareForEasyWin();
