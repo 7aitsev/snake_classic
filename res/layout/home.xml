@@ -61,9 +61,30 @@
           android:text="@string/but_about"/>
       </LinearLayout>
     </LinearLayout>
+    <!-- layout for the "High scores" content -->
+    <LinearLayout
+      android:id="@+id/layout_dummy"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center">
+      <TextView
+        style="@style/text"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/txt_gap"
+        android:lineSpacingExtra="@dimen/line_spacing"
+        android:textColor="@color/light_green"
+        android:text="@string/oops_txt"/>
+      <Button
+        style="@style/common_button"
+        android:id="@+id/send_email"
+        android:text="@string/oops_but"/>
+    </LinearLayout>
     <!-- layout for the "Rules" content -->
     <LinearLayout
-      android:id="@+id/layer_rules"
+      android:id="@+id/layout_rules"
       style="@style/very_useful_linear_layout_style">
       <TextView
         style="@style/activity"
@@ -87,7 +108,7 @@
     </LinearLayout>
     <!-- layout for the "About" content -->
     <RelativeLayout
-      android:id="@+id/layer_about"
+      android:id="@+id/layout_about"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
       <TextView

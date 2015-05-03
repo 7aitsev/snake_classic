@@ -84,12 +84,39 @@ public class ActHome extends Activity {
             new Intent(ActHome.this, ActSnakeGame.class));
       }
     });
+    final Button but_scores = (Button) findViewById(R.id.but_high_scores);
+    but_scores.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        mFlipper.setDisplayedChild(mFlipper.indexOfChild(findViewById(
+            R.id.layout_dummy)));
+      }
+    });
+
+    final Button send_email = (Button) findViewById(R.id.send_email);
+    send_email.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        String[] address = {getString(R.string.oops_email)};
+        String subject = getString(R.string.oops_subject);
+        String message = getString(R.string.oops_message);
+
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL, address);
+        email.putExtra(Intent.EXTRA_SUBJECT, subject);
+        email.putExtra(Intent.EXTRA_TEXT, message);
+        email.setType("message/rfc822");
+        startActivity(Intent.createChooser(email,
+            getString(R.string.oops_choice)));
+      }
+    });
+
     final Button but_rules = (Button) findViewById(R.id.but_rules);
     but_rules.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View v) {
         mFlipper.setDisplayedChild(mFlipper.indexOfChild(findViewById(
-            R.id.layer_rules)));
+            R.id.layout_rules)));
       }
     });
     final Button but_about  = (Button) findViewById(R.id.but_about);
@@ -97,7 +124,7 @@ public class ActHome extends Activity {
       @Override
       public void onClick(View v) {
         mFlipper.setDisplayedChild(mFlipper.indexOfChild(findViewById(
-            R.id.layer_about)));
+            R.id.layout_about)));
       }
     });
   }

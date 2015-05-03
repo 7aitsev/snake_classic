@@ -16,6 +16,14 @@
   <string name="txt_credits">This project includes font that is licensed under SIL OFL and designed by <a href="http://www.zone38.net">codeman38</a></string>
   <string name="txt_rules">Player is controlling a snake, which is crawling in a compound wall\n\nThere will be new fruits placed at different parts of the playing area and the strategy is to eat all of these while ensuring a smooth movement by the snake\n\nThe snake\'s movement should not be restricted by a wall or its own body\n\nWhile starting to play the game, managing the movement of your snake is very easy but when your snake eats fruits, the snake\'s body becomes bigger and navigation of the snake is very difficult</string>
 
+  <string name ="oops_txt">This place is under development.\nBy clicking on the button below, you motivate me to improve this game faster and make it to the end.\nThank you for taking the time to play. I hope you will like the game.</string>
+  <string name="oops_but">Accelerate development!</string>
+  <string name="oops_email">7aitsev@gmail.com</string>
+  <string name="oops_subject">Finish your game to the end</string>
+  <string name="oops_message">Hello, Maxim! I like your Snake Classic game. I know, you are a little busy, but please, do your game completely to the end. No doubt you can deal with it. Thank you for the game.\n\n[your name or sign]</string>
+  <string name="oops_choice">Choose an Email client :</string>
+
+
   <!-- used in the game activity -->
   <string name="txt_time">Time:</string>
   <string name="txt_time_init">00:00</string>
